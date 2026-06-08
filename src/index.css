@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.serif-it {
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* --- Animations that need CSS custom properties (kept here, not in Tailwind config) --- */
+.paw-float {
+  animation: floatPaw var(--dur, 6s) ease-in-out infinite;
+}
+.confetti-paw {
+  position: absolute;
+  will-change: transform, opacity;
+  animation: confettiPaw var(--cdur, 1s) ease-out forwards;
+}
+
+/* Hover lift used on cards */
+.lift {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+.lift:hover {
+  transform: translateY(-6px) scale(1.015);
+}
+
+/* Smooth gradient border for special cards */
+.glow-card {
+  position: relative;
+}
+.glow-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #fb923c, #f97316, #ea580c);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.glow-card:hover::before {
+  opacity: 1;
+}
+
+/* Glassmorphism helper */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Scroll-triggered fade */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paw-float,
+  .confetti-paw,
+  .animate-fade-up,
+  .animate-pop,
+  .animate-page,
+  .animate-pulse-ring {
+    animation: none !important;
+  }
+  .lift:hover {
+    transform: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
