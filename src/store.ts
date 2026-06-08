@@ -1,7 +1,7 @@
 import type { Post } from "./types";
 import { SAMPLE_POSTS } from "./data";
 
-const POSTS_KEY = "ph-posts";
+const POSTS_KEY = "pm-posts";
 
 export function loadPosts(): Post[] {
   try {

@@ -47,7 +47,7 @@ export default function HomePage({ go, onReport }: HomePageProps) {
                 잃어버리셨나요?
               </p>
               <p className="mt-4 max-w-md text-base text-white/80 drop-shadow sm:text-lg">
-                Pawinhand에 제보하시면 우리가 함께 찾는 것을 도와드립니다.
+                Pawmap에 제보하시면 우리가 함께 찾는 것을 도와드립니다.
               </p>
               <div className="mt-5 flex flex-wrap gap-2">
                 {STATS.map((s) => (

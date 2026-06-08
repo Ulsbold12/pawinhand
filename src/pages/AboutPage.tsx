@@ -31,13 +31,13 @@ export default function AboutPage({ go }: { go: (p: Page) => void }) {
       go={go}
       title={
         <>
-          우리는 <span className="serif-it text-orange-300">Pawinhand</span> 입니다
+          우리는 <span className="serif-it text-orange-300">Pawmap</span> 입니다
         </>
       }
       subtitle="모두가 집으로 돌아가는 그날까지, 함께 찾고 함께 돌봅니다."
     >
       <p className="max-w-2xl text-pretty text-lg leading-relaxed text-gray-700 sm:text-xl">
-        Pawinhand는 잃어버린 반려동물을 찾고, 갈 곳 없는 아이들에게 새로운 가족을 연결하는{" "}
+        Pawmap는 잃어버린 반려동물을 찾고, 갈 곳 없는 아이들에게 새로운 가족을 연결하는{" "}
         <span className="serif-it text-xl text-orange-500 sm:text-2xl">따뜻한</span> 커뮤니티예요. 작은 제보 하나가 한 가족을 다시 이어 줍니다.
       </p>
 

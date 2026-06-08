@@ -9,7 +9,7 @@ import AboutPage from "./pages/AboutPage";
 export default function App() {
   const [page, setPage] = useState<Page>(() => {
     try {
-      return (localStorage.getItem("ph-page") as Page) || "home";
+      return (localStorage.getItem("pm-page") as Page) || "home";
     } catch {
       return "home";
     }
@@ -20,7 +20,7 @@ export default function App() {
   const go = (p: Page) => {
     setPage(p);
     try {
-      localStorage.setItem("ph-page", p);
+      localStorage.setItem("pm-page", p);
     } catch {
       /* ignore */
     }

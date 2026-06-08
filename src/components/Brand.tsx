@@ -141,7 +141,7 @@ export function PawMark({ light = false }: { light?: boolean }) {
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-orange-500 text-white shadow-sm">
         <PawPrint className="h-[17px] w-[17px]" />
       </span>
-      Pawinhand
+      Pawmap
     </span>
   );
 }
